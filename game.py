@@ -1,10 +1,3 @@
-'''
-#############################################################
-#-----------------------------------------------------------|
-#O----------------------------------------------------------|
-#-----------------------------------------------------------|
-#############################################################
-'''
 import random
 import os
 import sys
@@ -25,7 +18,7 @@ class Car:
         self.x, self.y = start_point
 
         if genes is None:
-            self.genes = [random.choice(self._MOVES) for _ in range(20)]
+            self.genes = [random.choice(self._MOVES) for _ in range(50)]
         else:
             self.genes = genes
 
@@ -141,7 +134,6 @@ class Game:
             child_2[int(random.uniform(0, len(child_2)-0.01))] = random.choice(better_sort[i]._MOVES)
             child_3[int(random.uniform(0, len(child_3)-0.01))] = random.choice(better_sort[i]._MOVES)
             child_4[int(random.uniform(0, len(child_4)-0.01))] = random.choice(better_sort[i]._MOVES)
-
 
             # Creating new generation
             new_generation.append(Car(self._route.get_start_point(), child_1))
