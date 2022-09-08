@@ -7,4 +7,9 @@ simple_route = {
     'meta': [[1, 10], [2, 10], [3, 10]]
 }
 route = Route(simple_route)
-game = Game(route=route, cars_amount=40, iterations=100)
+game = Game(route=route, cars_amount=4, iterations=100)
+result_generation = game.start_learning()
+
+for car in result_generation:
+    print(car)
+    # game.show_race(car)
